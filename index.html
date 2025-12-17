@@ -2,166 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <title>Sean Stayte | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Reset and base styles */
+    /* Base styles */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f4f4f4;
-      color: #333;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background: #fff;
     }
-    header {
-      background: #007acc;
+
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      background: #333; /* medium charcoal grey */
       color: #fff;
-      padding: 20px 0;
-      text-align: center;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    header img {
-      width: 120px;
-      height: 120px;
+    .sidebar img {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 3px solid #fff;
+      margin-bottom: 20px;
     }
-    header h1 {
+    .sidebar h1 {
       margin: 10px 0 5px;
+      font-size: 1.6em;
     }
-    header p {
-      margin: 0;
-      font-style: italic;
+    .sidebar h2 {
+      margin: 0 0 15px;
+      font-weight: normal;
+      font-size: 1.1em;
+      color: #ddd;
     }
-    nav {
-      background: #005f99;
-      padding: 10px;
+    .sidebar p {
       text-align: center;
+      font-size: 0.95em;
+      margin-bottom: 20px;
     }
-    nav a {
+    .sidebar a {
       color: #fff;
-      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      margin: 5px 0;
+      display: block;
     }
-    nav a:hover {
+    .sidebar a:hover {
       text-decoration: underline;
     }
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 0 20px;
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 40px;
     }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #007acc;
-      margin-bottom: 10px;
-    }
-    .projects {
+    .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
     }
-    .project-card {
-      background: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .project-card h3 {
-      margin-top: 0;
-    }
-    .project-card a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    .project-card a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background: #007acc;
-      color: #fff;
+    .project {
       text-align: center;
-      padding: 15px 0;
     }
-    footer a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
+    .project img {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* ensures square thumbnails */
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    footer a:hover {
-      text-decoration: underline;
+    .project h3 {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <img src="headshot_pic.png" alt="My Photo">
-    <h1>Your Name</h1>
-    <p>Data Analyst | Developer | Designer</p>
-  </header>
-
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="container">
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm [Your Name]. Welcome to my portfolio! I specialize in [your skills].
-        I enjoy building projects that combine creativity and technical expertise.
-      </p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="project-card">
-          <h3>Project One</h3>
-          <p>A short description of your project goes here.</p>
-          <a href="https://github.com/your-username/project1">View on GitHub</a>
-        </div>
-        <div class="project-card">
-          <h3>Project Two</h3>
-          <p>Another project description goes here.</p>
-          <a href="https://github.com/your-username/project2">View on GitHub</a>
-        </div>
-        <!-- Add more project cards as needed -->
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Feel free to reach out via email or connect on social media:
-      </p>
-      <p>
-        <a href="mailto:your.email@example.com">Email</a> |
-        <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> |
-        <a href="https://github.com/your-username">GitHub</a>
-      </p>
-    </section>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="profile.jpg" alt="Sean Stayte">
+    <h1>Sean Stayte</h1>
+    <h2>Data Analyst</h2>
+    <p>
+      Passionate about turning data into insights. Experienced in statistical modeling, visualization, and creating actionable dashboards for real-world impact.
+    </p>
+    <a href="mailto:sean.stayte@example.com">Email</a>
+    <a href="https://linkedin.com/in/seanstayte">LinkedIn</a>
+    <a href="https://github.com/seanstayte">GitHub</a>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-    <p>
-      <a href="#about">About</a> |
-      <a href="#projects">Projects</a> |
-      <a href="#contact">Contact</a>
-    </p>
-  </footer>
+  <!-- Main Content -->
+  <div class="main">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <a href="https://github.com/seanstayte/solar-dashboard">
+          <img src="solar-thumbnail.jpg" alt="Solar Power Dashboard">
+          <h3>Solar Power Dashboard</h3>
+        </a>
+      </div>
+      <div class="project">
+        <a href="https://github.com/seanstayte/windows11-analysis">
+          <img src="windows-thumbnail.jpg" alt="Windows 11 Uptake Analysis">
+          <h3>Windows 11 Uptake Analysis</h3>
+        </a>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </div>
 </body>
 </html>
