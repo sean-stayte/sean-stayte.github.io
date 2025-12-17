@@ -61,35 +61,50 @@
       flex: 1;
       padding: 40px;
     }
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-  justify-items: center; /* centers thumbnails in their grid cells */
-}
-
-    .project {
-      text-align: center;
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
     }
-.project img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;   /* ensures the image fills the square without distortion */
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-    .project h3 {
-      margin-top: 10px;
-      font-size: 1em;
+    .project {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .project img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .project-details {
+      max-width: 600px;
+    }
+    .project-details h3 {
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: bold;
       color: #333;
+    }
+    .project-details p {
+      margin: 5px 0 0;
+      font-size: 0.95em;
+      color: #555;
+    }
+    .project-details a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    .project-details a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <!-- Sidebar -->
   <div class="sidebar">
-    <img src="headshot_pic.png" alt="Sean Stayte">
+    <img src="profile.jpg" alt="Sean Stayte">
     <h1>Sean Stayte</h1>
     <h2>Data Analyst</h2>
     <p>
@@ -103,20 +118,47 @@
   <!-- Main Content -->
   <div class="main">
     <h2>Projects</h2>
-    <div class="projects-grid">
+    <div class="project-list">
+      <!-- Project 1 -->
       <div class="project">
-        <a href="https://github.com/seanstayte/solar-dashboard">
-          <img src="f1_dspp_thumbnail.png" alt="Solar Power Dashboard">
-          <h3>F1 Pole Position</h3>
-        </a>
+        <img src="project1-thumbnail.jpg" alt="Project 1">
+        <div class="project-details">
+          <h3><a href="https://github.com/seanstayte/project1">Project One</a></h3>
+          <p>A one-sentence description of Project One goes here.</p>
+        </div>
       </div>
+      <!-- Project 2 -->
       <div class="project">
-        <a href="https://github.com/seanstayte/windows11-analysis">
-          <img src="windows-thumbnail.jpg" alt="Windows 11 Uptake Analysis">
-          <h3>Windows 11 Uptake Analysis</h3>
-        </a>
+        <img src="project2-thumbnail.jpg" alt="Project 2">
+        <div class="project-details">
+          <h3><a href="https://github.com/seanstayte/project2">Project Two</a></h3>
+          <p>A one-sentence description of Project Two goes here.</p>
+        </div>
       </div>
-      <!-- Add more projects as needed -->
+      <!-- Project 3 -->
+      <div class="project">
+        <img src="project3-thumbnail.jpg" alt="Project 3">
+        <div class="project-details">
+          <h3><a href="https://github.com/seanstayte/project3">Project Three</a></h3>
+          <p>A one-sentence description of Project Three goes here.</p>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="project">
+        <img src="project4-thumbnail.jpg" alt="Project 4">
+        <div class="project-details">
+          <h3><a href="https://github.com/seanstayte/project4">Project Four</a></h3>
+          <p>A one-sentence description of Project Four goes here.</p>
+        </div>
+      </div>
+      <!-- Project 5 -->
+      <div class="project">
+        <img src="project5-thumbnail.jpg" alt="Project 5">
+        <div class="project-details">
+          <h3><a href="https://github.com/seanstayte/project5">Project Five</a></h3>
+          <p>A one-sentence description of Project Five goes here.</p>
+        </div>
+      </div>
     </div>
   </div>
 </body>
